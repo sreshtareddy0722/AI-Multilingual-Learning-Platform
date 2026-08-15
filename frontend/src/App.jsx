@@ -1,34 +1,27 @@
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import StudentDashboard from "./pages/StudentDashboard";
+import UploadPDF from "./pages/UploadPDF";
+import Translation from "./pages/Translation";
+import Quiz from "./pages/Quiz";
+import TeacherDashboard from "./pages/TeacherDashboard";
+import Analytics from "./pages/Analytics";
 
 function App() {
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h1>AI Multilingual Learning Platform</h1>
-        <p>Learn in Your Native Language</p>
-
-        <input
-          type="email"
-          placeholder="Enter Email"
-          className="input-box"
-        />
-
-        <input
-          type="password"
-          placeholder="Enter Password"
-          className="input-box"
-        />
-
-        <button className="login-btn">
-          Login
-        </button>
-
-        <button className="guest-btn">
-          Continue as Guest
-        </button>
-      </div>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<StudentDashboard />} />
+        <Route path="/upload" element={<UploadPDF />} />
+        <Route path="/translation" element={<Translation />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/teacher" element={<TeacherDashboard />} />
+        <Route path="/analytics" element={<Analytics />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
