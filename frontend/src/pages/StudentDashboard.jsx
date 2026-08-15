@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 function StudentDashboard() {
+    const navigate = useNavigate();
   return (
     <div style={{ padding: "30px" }}>
       <h1>Welcome, Student 👋</h1>
@@ -12,12 +14,32 @@ function StudentDashboard() {
           marginTop: "30px",
         }}
       >
-        <div style={cardStyle}>📚 Upload PDF</div>
+        <div
+  className="card"
+  onClick={() => navigate("/upload")}
+>
+  📚 Upload PDF
+</div>
         <div style={cardStyle}>📸 Scan Textbook</div>
-        <div style={cardStyle}>🌐 Translate</div>
+        <div
+  className="card"
+  onClick={() => navigate("/translation")}
+>
+  🌐 Translation
+</div>
         <div style={cardStyle}>🎤 Ask AI</div>
-        <div style={cardStyle}>📝 Quiz</div>
-        <div style={cardStyle}>📊 Progress</div>
+        <div
+  className="card"
+  onClick={() => navigate("/quiz")}
+>
+  📝 Quiz
+</div>
+        <div
+  className="card"
+  onClick={() => navigate("/analytics")}
+>
+  📊 Progress
+</div>
       </div>
     </div>
   );

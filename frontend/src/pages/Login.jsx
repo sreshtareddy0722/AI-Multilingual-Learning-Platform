@@ -1,6 +1,8 @@
 import "./Login.css";
-
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 function Login() {
+    const navigate = useNavigate();
   return (
     <div className="login-container">
       <div className="login-card">
@@ -19,13 +21,19 @@ function Login() {
           className="input-box"
         />
 
-        <button className="login-btn">
-          Login
-        </button>
+        <button
+  className="login-btn"
+  onClick={() => navigate("/dashboard")}
+>
+  Login
+</button>
 
-        <button className="guest-btn">
-          Continue as Guest
-        </button>
+        <button
+  className="guest-btn"
+  onClick={() => navigate("/dashboard")}
+>
+  Continue as Guest
+</button>
       </div>
     </div>
   );
