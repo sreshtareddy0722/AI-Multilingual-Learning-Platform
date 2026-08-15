@@ -7,7 +7,7 @@ function Login() {
     <div className="login-container">
       <div className="login-card">
         <h1>AI Multilingual Learning Platform</h1>
-        <p>Learn in Your Native Language</p>
+        <p>Select your role to continue</p>
 
         <input
           type="email"
@@ -25,7 +25,14 @@ function Login() {
   className="login-btn"
   onClick={() => navigate("/dashboard")}
 >
-  Login
+  Student Login
+</button>
+
+<button
+  className="guest-btn"
+  onClick={() => navigate("/teacher")}
+>
+  Teacher Login
 </button>
 
         <button

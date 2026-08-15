@@ -38,8 +38,9 @@ function StudentDashboard() {
   className="card"
   onClick={() => navigate("/analytics")}
 >
-  📊 Progress
+  📊 Progress Analytics
 </div>
+    
       </div>
     </div>
   );
